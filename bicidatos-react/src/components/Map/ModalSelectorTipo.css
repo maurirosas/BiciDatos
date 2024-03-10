@@ -1,0 +1,78 @@
+.modal-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.modal-item:hover {
+  opacity: 0.8;
+}
+
+.btn-close {
+  width: 22px;
+  height: 22px;
+  font-size: 25px;
+  position: absolute;
+  top: 8px;
+  right: 19px;
+  color: rgb(109, 98, 98);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close:hover {
+  color: rgb(34, 32, 32);
+}
+
+div.MuiPaper-root {
+  border-radius: 1.25rem;
+}
+
+div.MuiDialogActions-root {
+  justify-content: center;
+}
+
+div.MuiDialogActions-root .MuiButtonBase-root{
+  border-radius: 1.25rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+button.MuiButton-textPrimary {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+button.MuiButton-root.Mui-disabled {
+  background-color: rgba(127, 127, 127, .25);
+  color: rgba(86, 84, 84, 0.45);
+  opacity: 0.7;
+  cursor: auto;
+}
+
+button.MuiButton-text {
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  button.MuiButton-root span.MuiButton-label {
+    font-size: 12px;
+  }
+}

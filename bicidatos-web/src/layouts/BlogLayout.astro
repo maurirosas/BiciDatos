@@ -1,0 +1,88 @@
+---
+const { frontmatter } = Astro.props;
+import Chip from "../components/Chip.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeadBody from "./HeadBody.astro";
+import { transformToLocaleDate } from "../js/utils.js";
+---
+
+<HeadBody />
+<Header />
+<div class="container">
+    <h1>{frontmatter.title}</h1>
+    <br />
+    <p style="text-align: right">
+        {
+            frontmatter.year
+                ? frontmatter.year
+                : transformToLocaleDate(frontmatter.date)
+        }
+    </p>
+    <br />
+    <b><h4 style="text-align:left; color:black">{frontmatter.author}</h4></b>
+    <br />
+    <slot />
+    <br />
+    <br />
+    <br />
+    <div class="contenedor-chips">
+        {frontmatter.tags.map((tag) => <Chip label={tag} />)}
+    </div>
+    <br />
+</div>
+<Footer />
+<HeadBody />
+
+<style is:global>
+    :root {
+        --primario: #15c0e9;
+        --gris: #7a7a7a;
+    }
+    .container {
+        padding: 10% 20% 10% 20%;
+        margin-inline: auto;
+        font-family: "Albert Sans", sans-serif;
+        line-height: 1.5;
+        color: var(--gris);
+    }
+
+    .contenedor-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    h1 {
+        color: var(--primario);
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        color: var(--primario);
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .container p {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 27px;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+
+    @media (max-width: 480px) {
+    }
+</style>

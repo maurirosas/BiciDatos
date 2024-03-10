@@ -1,0 +1,296 @@
+---
+import HeadBody from "../layouts/HeadBody.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<HeadBody>
+    <Header />
+    <section class="container">
+        <h1>Acerca de BiciDatos</h1>
+        <br />
+        <p>
+            ¡Bienvenido a BiciDatos, la plataforma web y aplicación móvil que
+            desarrolla monitoreo ciudadano de datos sobre ciclismo urbano en
+            Bolivia! Para que los ciudadanos se informen y participen
+            activamente en la construcción de la cultura ciclista, porque una
+            ciudad sostenible y colectiva se construye sinergicamente. BiciDatos
+            te brinda acceso a una amplia variedad de datos y recursos
+            relacionados con el ciclismo urbano en Bolivia. Podrás encontrar
+            información actualizada sobre infraestructura ciclista, servicios
+            ciclistas y bicilogística, aforos, vulneración ciclista, rutas
+            seguras para bicicletas, propuestas ciudadanas, eventos relacionados
+            con el ciclismo y mucho más. Es una iniciativa del Laboratorio de
+            Tecnologías Sociales en colaboración con la Coordinadora de
+            Ciclistas Cochabamba, Masa Crítica Kanata y el Taller de Acupuntura
+            Urbana. Con apoyo de Ciudadania Comunidad de Estudios Sociales y
+            Acción Pública, y Brot für die Welt.
+        </p>
+        <br />
+        <br />
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="https://labtecnosocial.org/">
+                    <img
+                        src="/1.png"
+                        alt="Laboratorio de Tecnologías Sociales"
+                    />
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.facebook.com/groups/205467580210035/">
+                    <img
+                        src="/2.jpeg"
+                        alt="Coordinadora de Ciclistas Cochabamba"
+                    />
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.facebook.com/MasaCriticaKanata">
+                    <img src="/3.png" alt="Masa Crítica Kanata" />
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.facebook.com/tau.acupunturaurbana/">
+                    <img src="/4.jpeg" alt="Taller de Acupuntura Urbana" />
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.ciudadaniabolivia.org/">
+                    <img src="5.jpg" alt="Ciudadanía Bolivia" />
+                </a>
+            </div>
+            <div class="grid-item">
+                <a
+                    href="https://www.brot-fuer-die-welt.de/es/pan-para-el-mundo/"
+                >
+                    <img src="/6.jpg" alt="Pan para el mundo" />
+                </a>
+            </div>
+        </div>
+
+        <p>
+            BiciDatos surgió en el año 2020 como resultado de la co-creación
+            entre colectivos ciudadanos y ciclistas comprometidos. Con el
+            propósito de ser una valiosa herramienta para la generación de datos
+            abiertos, para la mejora de la toma de decisiones y el desarrollo de
+            políticas públicas en el ámbito de la movilidad ciclista basada en
+            la evidencia.
+        </p>
+
+        <img
+            class="grafico"
+            src="/colaboradores.png"
+            alt="Cocreación BiciDatos"
+        />
+
+        <p>
+            Desde 2021, Bicidatos en estrecha colaboración con voluntarios
+            comprometidos, ha estado involucrado en la realización de
+            investigaciones exploratorias centradas en la movilidad ciclista, la
+
+
+            <a href="/bici-blog/bicilogistica">bicilogística</a> y <a
+                href="/bici-blog/ecosistema-actores-ciclistas"
+                >mapeos del ecosistema de actores ciclistas</a
+            >. Durante este tiempo, también, ha llevado a cabo mapeos
+            colaborativos, talleres focales con colectivos de <a
+                href="/ciclismo-urbano-bolivia">ciclismo urbano</a
+            >, BiciForos, para recopilar datos y comprender mejor las
+            necesidades de la comunidad ciclista y la ciudadanía para el
+            desarrollo de nuevas funciones permitan un padaleo más seguro en la
+            ciudad. Conozca a nuestro equipo.
+        </p>
+
+        <img class="grafico" src="/equipo.png" alt="Equipo BiciDatos" />
+
+        <p>
+            Únete a BiciDatos hoy mismo y sé parte de la transformación hacia
+            una movilidad sostenible y una ciudad con mayor responsabilidad
+            colectiva por el bien común.
+        </p>
+
+        <div class="slogan-grid">
+            <div class="grid-item-2">
+                <h1 id="texto">
+                    Usa tu bici, pedalea y comienza a subir BiciDatos
+                </h1>
+            </div>
+            <div class="grid-item-2">
+                <img id="logo" src="/bicidatos.blanco.png" alt="BiciDatos" />
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <Footer />
+</HeadBody>
+
+<style>
+    .container {
+        padding: 10% 15% 5% 15%;
+    }
+
+    h1 {
+        color: var(--primario);
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #15c0ea;
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 700;
+        font-size: 100;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    p {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 20px;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    /* Estilos para el grid */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        grid-template-rows: auto auto auto auto auto auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* Estilos para los elementos del grid */
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Estilos para las imágenes */
+    .grid-item img {
+        max-width: 80%;
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+    /* Efecto de hover para las imágenes */
+    .grid-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Estilos para los hipervínculos */
+    .grid-item a {
+        display: block;
+        text-decoration: none;
+    }
+
+    /* Estilos para las imagenes */
+
+    .grafico {
+        width: 100%;
+        align-items: center;
+    }
+
+    /* Animacion leve continua*/
+    .grafico {
+        animation: moveUpDown 3s ease-in-out infinite;
+    }
+    @keyframes moveUpDown {
+        0% {
+            transform: translateY(-5px);
+        }
+        50% {
+            transform: translateY(5px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+    }
+
+    /* Estilos para el grid del slogan */
+    .slogan-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-rows: auto auto;
+    }
+
+    /* Estilos para los elementos del grid */
+    .grid-item-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #logo {
+        width: 80%;
+    }
+
+    /* Animacion leve continua*/
+    #logo {
+        animation: moveUpDown 3s ease-in-out infinite;
+    }
+    @keyframes moveUpDown {
+        0% {
+            transform: translateY(-5px);
+        }
+        50% {
+            transform: translateY(5px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+    }
+
+    a {
+        color: #15c0ea;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    @media (max-width: 915px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .slogan-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            grid-template-rows: auto;
+        }
+
+        #logo {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+</style>

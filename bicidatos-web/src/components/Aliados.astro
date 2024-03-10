@@ -1,0 +1,149 @@
+<section>
+    <h2>BiciDatos: es co-creación y colaboración</h2>
+    <br />
+
+    <h4>Una iniciativa entre:</h4>
+    <br />
+    <br />
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="https://labtecnosocial.org/">
+                <img src="/1.png" alt="Laboratorio de Tecnologías Sociales" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/groups/205467580210035/">
+                <img src="/2.jpeg" alt="Coordinadora de Ciclistas Cochabamba" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/MasaCriticaKanata">
+                <img src="/3.png" alt="Masa Crítica Kanata" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/tau.acupunturaurbana/">
+                <img src="/4.jpeg" alt="Taller de Acupuntura Urbana" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.ciudadaniabolivia.org/">
+                <img src="5.jpg" alt="Ciudadanía Bolivia" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.brot-fuer-die-welt.de/es/pan-para-el-mundo/">
+                <img src="/6.jpg" alt="Pan para el mundo" />
+            </a>
+        </div>
+    </div>
+
+    <br />
+
+    <h4>Nuestros aliados son:</h4>
+    <br />
+    <br />
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="https://www.facebook.com/profile.php?id=100092725584198">
+                <img src="/7.png" alt="Bici Foro Cochabamba" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/Briz.Bolivia">
+                <img src="/8.jpg" alt="Briz" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/BikeArtTour">
+                <img src="/9.jpg" alt="Bike Art Cocha" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/BixieByFlawaPawa">
+                <img src="/10.jpg" alt="Bixie" />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/pbacc.bolivia">
+                <img
+                    src="11.png"
+                    alt="Plataforma Boliviana de Acción Frente al Cambio Climático"
+                />
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://www.facebook.com/RELIDDBO">
+                <img src="/12.png" alt="RELIDD" />
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    h2 {
+        color: var(--primario);
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 400;
+        font-size: 80;
+        text-align: center;
+    }
+
+    h4 {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 20;
+        font-weight: 200;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    /* Estilos para el grid */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        grid-template-rows: auto auto auto auto auto auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* Estilos para los elementos del grid */
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Estilos para las imágenes */
+    .grid-item img {
+        max-width: 60%;
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+    /* Efecto de hover para las imágenes */
+    .grid-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Estilos para los hipervínculos */
+    .grid-item a {
+        display: block;
+        text-decoration: none;
+    }
+
+    @media (max-width: 915px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+</style>

@@ -1,0 +1,87 @@
+<footer>
+    <br />
+    <br />
+    <div class="grid-footer">
+        <div class="grid-section">
+            <p>BiciDatos Bolivia</p>
+            <br />
+            <a href="mailto:bicidatosbo@gmail.com"> bicidatosbo@gmail.com</a>
+            <br />
+            <p>
+                Desarrollado por el
+                <a href="https://labtecnosocial.org/">Lab TecnoSocial</a>
+            </p>
+        </div>
+
+        <div class="grid-section">
+            <a href="/acerca">Acerca de BiciDatos</a><br />
+            <a href="/terminos">Términos y condiciones</a><br />
+            <a href="/politica-privacidad">Política de privacidad</a><br />
+        </div>
+
+        <div class="grid-section">
+            <a href="https://www.facebook.com/BiciDatos">
+                <img src="/logofb.png" alt="Facebook" />
+            </a>
+            <br />
+            <a href="https://instagram.com/bicidatos_bo"></a>
+            <img src="/logoig.png" alt="Instagram" />
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #f1eff0;
+        box-shadow: 0px 0px 50px 1px rgb(133 66 189 / 10%); /* Sombra */
+        color: var(--gris);
+        font-family: "Albert Sans", sans-serif;
+    }
+
+    a {
+        color: #15c0ea;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    img {
+        width: 30px;
+    }
+
+    /* Estilos para el grid */
+    .grid-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-template-rows: auto auto auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* Estilos para los elementos del grid */
+    .grid-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+    }
+    /* Estilos para pantalla celular*/
+
+    @media (max-width: 480px) {
+        .grid-footer {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+
+    .grid-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+</style>

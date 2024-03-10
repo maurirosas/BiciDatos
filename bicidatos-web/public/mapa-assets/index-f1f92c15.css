@@ -1,0 +1,842 @@
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+main {
+    display: flex;
+    position: fixed
+}
+
+.map__container {
+    width: 100vw;
+    height: 50vh;
+    font-size: .5rem !important
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 95vh !important
+}
+
+.leaflet-control-layers {
+    padding-bottom: 25px
+}
+
+.MuiCircularProgress-colorPrimary {
+    color: #15c0ea !important
+}
+
+.leaflet-touch .leaflet-bar a:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px
+}
+
+.leaflet-touch .leaflet-bar a:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px
+}
+
+.leaflet-bar {
+    border-radius: 70px
+}
+
+.leaflet-control {
+    background: none;
+    border: none
+}
+
+.leaflet-bottom {
+    bottom: 40px
+}
+
+.leaflet-control-layers {
+    padding: 0;
+    border-radius: 70px;
+    height: 400px
+}
+
+.leaflet-control-layers-overlays {
+    background: #fff !important;
+    bottom: 31px;
+    opacity: 1;
+    height: 353px;
+    border-radius: 70px;
+    bottom: 6rem;
+    left: 2rem;
+    padding-top: 46px
+}
+
+.leaflet-control-layers-overlays label {
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    height: 60px
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(1) {
+    color: #006dff;
+    background-image: url(https://bicidatos.org/mapa-assets/img/flotante-parqueo.svg);
+    transition: opacity .5s ease-in-out
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(1):hover {
+    opacity: .8
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(2) {
+    color: #44740e;
+    background-image: url(https://bicidatos.org/mapa-assets/img/flotante-taller.svg);
+    transition: opacity .5s ease-in-out
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(2):hover {
+    opacity: .8
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(3) {
+    color: #e20000;
+    background-image: url(https://bicidatos.org/mapa-assets/img/flotante-seguridad.svg);
+    transition: opacity .5s ease-in-out
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(3):hover {
+    opacity: .8
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(4) {
+    color: #fb2;
+    background-image: url(https://bicidatos.org/mapa-assets/img/flotante-aforos.svg);
+    transition: opacity .5s ease-in-out
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(4):hover {
+    opacity: .8
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(5) {
+    color: #569af4;
+    background-image: url(https://bicidatos.org/mapa-assets/img/flotante-ruta.svg);
+    transition: opacity .5s ease-in-out
+}
+
+.leaflet-control-layers-overlays label:nth-of-type(5):hover {
+    opacity: .8
+}
+
+.leaflet-control-layers-selector {
+    display: none
+}
+
+.leaflet-control-layers-base label:first-of-type,
+.leaflet-control-layers-separator {
+    display: none
+}
+
+.leaflet-control-layers leaflet-control-layers-expanded leaflet-control {
+    padding: 0
+}
+
+.leaflet-control-layers-base label {
+    text-align: center
+}
+
+.leaflet-control-layers-overlays {
+    background-color: #eceff1;
+    width: 100%
+}
+
+.leaflet-control-layers-overlays label {
+    margin: 0;
+    cursor: pointer
+}
+
+.leaflet-control-layers-overlays label:hover {
+    background-color: #f1f2f7
+}
+
+.leaflet-control-layers-overlays label span {
+    display: inline-block;
+    text-align: center;
+    width: 95%;
+    padding: 3px;
+    margin-top: 13px;
+    font-weight: 400;
+    color: #000000de
+}
+
+.leaflet-control-attribution {
+    display: none !important
+}
+
+div.leaflet-top,
+div.leaflet-left {
+    width: 100%;
+    font-family: Poppins
+}
+
+div.leaflet-control-zoom {
+    top: 0;
+    right: 13px;
+    position: absolute
+}
+
+div.leaflet-control-zoom.left-zoom {
+    top: 0;
+    left: 13px;
+    position: absolute;
+    z-index: 9999
+}
+
+button.MuiButton-root span.MuiButton-startIcon {
+    display: block
+}
+
+button.MuiButton-root span.MuiButton-startIcon svg {
+    display: none
+}
+
+a.MuiButtonBase-root {
+    flex-grow: 0;
+    flex-basis: 0
+}
+
+h6.MuiTypography-h6 {
+    font-size: 0;
+    margin-left: 80px;
+    background-image: url(https://bicidatos.org/mapa-assets/img/bicidatos_blanco_android.svg);
+    width: 86px;
+    height: 56px;
+    background-size: 82%;
+    background-repeat: no-repeat
+}
+
+@media (max-width: 767px) {
+    span.MuiButton-label {
+        padding: 12px 8px 12px 12px
+    }
+
+    h6.MuiTypography-h6 {
+        margin-left: 50px
+    }
+
+    button.MuiButton-root {
+        border-radius: 50%
+    }
+
+    span.MuiButton-startIcon {
+        margin: 0
+    }
+
+    button.MuiButton-text {
+        padding: 0
+    }
+
+    button.MuiButton-root {
+        min-width: 0
+    }
+
+    button.MuiButton-root span.MuiButton-startIcon {
+        display: inline-block
+    }
+
+    button.MuiButton-root span.MuiButton-label {
+        font-size: 0
+    }
+
+    button.MuiButton-root span.MuiButton-startIcon svg {
+        display: block
+    }
+}
+
+@media (max-width: 375px) {
+    .leaflet-control-layers {
+        width: 64px
+    }
+
+    .leaflet-control-layers-overlays {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .leaflet-control-layers-overlays label {
+        font-size: .7rem
+    }
+
+    .leaflet-control-layers-overlays label span {
+        width: auto
+    }
+
+    .leaflet-left .leaflet-control {
+        margin-left: 5px
+    }
+}
+
+.zoom-control {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000
+}
+
+.left-zoom-control {
+    right: unset;
+    left: 10px
+}
+
+.alert {
+    border-radius: 4px;
+    position: absolute;
+    right: 14px;
+    bottom: 40px;
+    z-index: 9999;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 0;
+    font-weight: 700;
+    transition: opacity .3s ease-in-out
+}
+
+.alert.show {
+    opacity: 1
+}
+
+.success {
+    background-color: #4caf50;
+    color: #fff
+}
+
+.info {
+    background-color: #2196f3;
+    color: #fff
+}
+
+.warning {
+    background-color: #ff9800;
+    color: #fff
+}
+
+.error {
+    background-color: #d32f2f;
+    color: #fff
+}
+
+.form-departamento {
+    z-index: 1000;
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    transform: translate(-50%);
+    margin-left: 45px;
+    cursor: auto;
+    margin-top: 1.25rem !important;
+    width: 63%
+}
+
+@media (max-width: 375px) {
+    .form-departamento {
+        left: 45%
+    }
+}
+
+.MuiFormLabel-root {
+    text-align: center
+}
+
+.MuiFormLabel-root {
+    position: relative
+}
+
+.MuiFormLabel-root:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+label.MuiFormLabel-root {
+    text-align: center
+}
+
+.form-departamento select {
+    transition-property: background, box-shadow;
+    box-shadow: 0 2px 4px #0003, 0 -1px #00000005;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px
+}
+
+.MuiInputLabel-filled {
+    transform: translate(12px, 20px) scale(1)
+}
+
+.MuiInputLabel-filled.MuiInputLabel-shrink {
+    transform: translate(40px, 10px) scale(.75) !important
+}
+
+@media (max-width: 375px) {
+    .MuiInputLabel-filled {
+        transform: translate(2px, 20px) scale(1) !important
+    }
+
+    .MuiInputLabel-filled.MuiInputLabel-shrink {
+        transform: translate(30px, 10px) scale(.75) !important
+    }
+}
+
+.MuiFilledInput-root {
+    background-color: #fff !important;
+    border: none
+}
+
+.MuiFormLabel-root.Mui-focused {
+    color: #434545 !important
+}
+
+.MuiSelect-select {
+    text-align-last: center
+}
+
+.MuiSelect-select {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px
+}
+
+.MuiSelect-select:focus {
+    background-color: #fff !important
+}
+
+.MuiFilledInput-underline:before,
+.MuiFilledInput-underline:after {
+    border-bottom: none !important
+}
+
+.modal-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%
+}
+
+.modal-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #000000de;
+    cursor: pointer;
+    font-weight: 400
+}
+
+.modal-item:hover {
+    opacity: .8
+}
+
+.btn-close {
+    width: 22px;
+    height: 22px;
+    font-size: 25px;
+    position: absolute;
+    top: 8px;
+    right: 19px;
+    color: #6d6262;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.btn-close:hover {
+    color: #222020
+}
+
+div.MuiPaper-root {
+    border-radius: 1.25rem
+}
+
+div.MuiDialogActions-root {
+    justify-content: center
+}
+
+div.MuiDialogActions-root .MuiButtonBase-root {
+    border-radius: 1.25rem;
+    padding-left: .625rem;
+    padding-right: .625rem
+}
+
+button.MuiButton-textPrimary {
+    color: #fff;
+    text-transform: capitalize
+}
+
+button.MuiButton-root.Mui-disabled {
+    background-color: #7f7f7f40;
+    color: #56545473;
+    opacity: .7;
+    cursor: auto
+}
+
+button.MuiButton-text {
+    text-transform: capitalize
+}
+
+@media (max-width: 767px) {
+    button.MuiButton-root span.MuiButton-label {
+        font-size: 12px
+    }
+}
+
+.MuiFormControl-root {
+    width: 100%
+}
+
+@media (max-width:375px) {
+    .form-search {
+        left: 45% !important;
+        width: 75% !important
+    }
+}
+
+input:focus {
+    text-align: center
+}
+
+label.MuiFormLabel-root {
+    width: 100%;
+    text-align: center
+}
+
+form.MuiTextField-root {
+    width: 100%;
+    border-radius: 24px
+}
+
+form.MuiFilledInput-root {
+    border-radius: inherit;
+    overflow: hidden
+}
+
+form div.MuiFilledInput-input {
+    width: 100%
+}
+
+input#filled-basic.MuiInputBase-input.MuiFilledInput-input {
+    background: #fff
+}
+
+.form__container {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background-color: #fff;
+    top: 0;
+    right: -100%;
+    transition: all .2s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-margin-top: 100px
+}
+
+@media screen and (max-width: 767px) {
+    .form__container {
+        height: 100vh
+    }
+}
+
+.subform__container {
+    display: flex
+}
+
+.form__container--active {
+    right: 0
+}
+
+.form__description__container {
+    padding: 1rem
+}
+
+.form__header {
+    padding: 1rem .5rem;
+    background-color: #15c0ea;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700
+}
+
+.form__header__close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer
+}
+
+.button__container {
+    display: flex
+}
+
+.form__button {
+    text-decoration: none;
+    font-weight: 700;
+    background-color: #15c0ea;
+    border-radius: .5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    font-family: Poppins
+}
+
+.formGroup {
+    padding: .2rem 2rem
+}
+
+.formGroupInput {
+    display: flex;
+    flex-direction: column
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem
+}
+
+input {
+    height: 2rem
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #15c0ea !important;
+    outline-color: #15c0ea !important
+}
+
+.errors {
+    font-size: .8rem;
+    margin-top: .2rem;
+    text-align: right;
+    color: #c41c1c
+}
+
+#selectForm,
+#accesibilidad,
+#senalizacion,
+#seguridadPercibida,
+#tipoServicio,
+#tipoIncidente {
+    width: 250px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5%;
+    font-family: Poppins
+}
+
+@media only screen and (min-width: 768px) {
+    .form__container {
+        top: auto;
+        width: 25%
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .form__container {
+        top: auto;
+        width: 20%
+    }
+
+    .formGroup {
+        margin-left: 2rem
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .form__container {
+        height: 100vh;
+        background-color: #fff;
+        overflow-y: scroll
+    }
+
+    .subform__container {
+        display: flex
+    }
+
+    .subform__container .formGroup {
+        width: 250px
+    }
+
+    .formGroup {
+        padding: .2rem 3rem
+    }
+
+    .formGroupInput {
+        display: flex;
+        flex-direction: column
+    }
+
+    label {
+        font-size: .8rem;
+        font-weight: 700;
+        margin-bottom: .5rem
+    }
+
+    input {
+        height: 2rem
+    }
+
+    .errors {
+        font-size: .7rem;
+        margin-top: .2rem;
+        text-align: right;
+        color: #c41c1c
+    }
+}
+
+.preview__container {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #fff;
+    top: 0;
+    right: -100%;
+    transition: all .2s ease-in-out;
+    overflow-x: hidden
+}
+
+.preview__container--active {
+    right: 0
+}
+
+.preview__description__container {
+    padding: 1rem;
+    line-height: 1.6rem
+}
+
+.preview__description__container b {
+    color: #15c0ea
+}
+
+.preview__description__container a {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top
+}
+
+.preview__content {
+    width: 90%;
+    margin: 0 auto
+}
+
+.preview__close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer
+}
+
+.preview__button {
+    text-decoration: none;
+    font-weight: 700;
+    background-color: #f9b29c;
+    border-radius: .5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+    cursor: pointer
+}
+
+.preview__title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem
+}
+
+.preview__description {
+    line-height: 1.5rem;
+    color: #484848
+}
+
+.preview__picture {
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+@media only screen and (min-width: 768px) {
+    .preview__container {
+        top: auto;
+        width: 25%;
+        height: calc(100vh - 64px)
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .preview__container {
+        top: auto;
+        width: 25%
+    }
+}
+
+.seccion-flechas,
+.seccion-notificar-actualizar {
+    display: flex;
+    justify-content: space-between
+}
+
+.puntos li {
+    display: inline;
+    padding-right: 2px
+}
+
+.puntos {
+    margin-right: 2.5em
+}
+
+.preview__container .MuiSvgIcon-root {
+    color: #15c0ea
+}
+
+.propiedad-style {
+    color: #15c0ea;
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 1.4rem
+}
+
+.valor-style {
+    color: #716969;
+    font-size: 1.4rem;
+    font-family: Poppins;
+    font-weight: 700
+}

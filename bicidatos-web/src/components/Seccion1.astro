@@ -1,0 +1,292 @@
+<head>
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+        crossorigin="anonymous"
+    />
+</head>
+
+<section class="container">
+    <h2>La única tecnología para la movilidad ciclista en Bolivia</h2>
+    <br />
+
+    <h4>que promueve:</h4>
+    <br />
+    <br />
+
+    <div class="card-container">
+        <div class="card">
+            <br />
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <br />
+            <h2>Participación Ciudadana</h2>
+            <br />
+            <br />
+            <h4>
+                Intervención activa de la ciudadanía en la construcción de datos
+                de ciclismo urbano
+            </h4>
+        </div>
+        <div class="card">
+            <br />
+            <i class="fa fa-database" aria-hidden="true"></i>
+            <br />
+            <h2>Datos Abiertos</h2>
+            <br />
+            <br />
+            <h4>
+                Recolección y análisis de datos de ciclismo accesibles y
+                disponibles libremente para todos
+            </h4>
+        </div>
+        <div class="card">
+            <br />
+            <i class="fa fa-bicycle" aria-hidden="true"></i>
+            <br />
+            <h2>Incidencia</h2>
+            <br />
+            <br />
+            <h4>
+                Incidencia en políticas públicas sobre movilidad ciclista y
+                ciudades sostenibles
+            </h4>
+        </div>
+    </div>
+
+    <br />
+    <h4>¡Participa tú también!</h4>
+    <br />
+    <br />
+    <div class="card-container-2">
+        <a
+            href="https://play.google.com/store/apps/details?id=org.labtecnosocial.bicidatos.android"
+        >
+            <div class="card-2">
+                <br />
+
+                <img src="/google-play.png" alt="Play Store" />
+
+                <br />
+                <h2>Descarga la app</h2>
+            </div>
+        </a>
+        <a href="/mapa/">
+            <div class="card-2">
+                <br />
+
+                <img src="/mapa.png" alt="Mapa en linea" />
+
+                <br />
+                <h2>Mapa en linea</h2>
+            </div>
+        </a>
+    </div>
+</section>
+
+<br />
+<br />
+
+<div class="grid-container">
+    <div class="container">
+        <br />
+        <h4>
+            ¡Explora BiciDatos! Descubre nuestra historia y nuestr@s
+            colaboradores. Únete a la comunidad ciclista, construye una ciudad
+            sostenible y colectiva.
+        </h4>
+        <br />
+        <button class="boton-acerca-bicidatos">
+            <a href="/acerca/">Acerca de BiciDatos</a>
+        </button>
+    </div>
+    <div class="video">
+        <br />
+        <video autoplay muted loop playsinline poster="" id="intro-video">
+            <source src="bicidatos.mp4" type="video/mp4" />
+        </video>
+        <br />
+        <br />
+        <br />
+    </div>
+</div>
+
+<style>
+    .container {
+        padding: 5px;
+    }
+
+    /* Estilos globales */
+
+    i {
+        color: var(--primario);
+        height: 50px;
+        width: 50 px;
+    }
+
+    h2 {
+        color: var(--primario);
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 400;
+        font-size: 80;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    h4 {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    /* Estilos para el contenedor de las tarjetas objetivos */
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        grid-template-rows: auto auto auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* Estilos para las tarjetas objetivos */
+    .card {
+        color: white;
+        border: 1px solid white;
+        border-radius: 30px;
+        box-shadow: 0px 0px 50px 1px rgb(133 66 189 / 10%); /* Sombra */
+        text-align: center;
+        padding-left: 40px;
+        padding-bottom: 60px;
+        padding-right: 40px;
+        padding-top: 60px;
+    }
+
+    /* Estilos para los  iconos objetivos */
+    .card i {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    /* Estilos para el texto de las tarjetas */
+    .card h2 {
+        color: var(--primario);
+        text-align: center;
+    }
+
+    /* Estilo tarjetas acceso  */
+
+    .card-container-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        grid-template-rows: auto auto;
+    }
+    .card-container-2 a {
+        text-decoration: none;
+    }
+
+    .card-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0px 0px 50px 1px rgb(133 66 189 / 10%); /* Sombra */
+        color: white;
+        width: 300px;
+        border: 1px solid white;
+        border-radius: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .card-2 img {
+        height: 50px;
+        width: 50 px;
+        color: var(--primario);
+    }
+
+    /* Estilos para el contenedor de acerca bicidatos */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        grid-template-rows: auto auto;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .boton-acerca-bicidatos {
+        margin-top: 5vh;
+        background-color: var(--primario);
+        font-size: 1em;
+        border-radius: 50px;
+        border: none;
+        padding: 15px 30px;
+    }
+
+    button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    video {
+        width: 70%;
+        height: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    @media (max-width: 915px) {
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .card {
+            margin-bottom: 50px;
+        }
+
+        .card-container-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            grid-template-rows: auto;
+        }
+
+        .card-2 {
+            margin-left: 60px;
+            margin-right: 60px;
+            width: 300px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            grid-template-rows: auto;
+        }
+
+        .container {
+            margin-top: 150px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+</style>

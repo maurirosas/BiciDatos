@@ -1,0 +1,73 @@
+---
+const { url, image, title, year, author, organization, tags } = Astro.props;
+import { transformToLocaleDate } from "../js/utils.js";
+---
+
+<div class="card">
+    <a href={url}>
+        <img
+            src={image}
+            alt="Imagen post"
+            style="object-fit: contain; aspect-ratio: 1 / 1"
+            width="100%"
+        />
+        <div class="container">
+            <h4><b>{title}</b></h4>
+            <p>Organización: {organization}</p>
+            <p>Año: {year}</p>
+            <p>Autor: {author}</p>
+            <p>Etiquetas: {tags.join(", ")}</p>
+        </div>
+    </a>
+</div>
+
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        border-radius: 20px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .container::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .title {
+        color: grey;
+        font-size: 18px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .card button:hover {
+        opacity: 0.7;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 0.8rem;
+    }
+    img {
+        border-radius: 20px 20px 0 0;
+    }
+</style>

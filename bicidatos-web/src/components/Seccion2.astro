@@ -1,0 +1,166 @@
+<section class="container">
+    <br />
+    <br />
+    <br />
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <br />
+            <img src="/casestudiesmapbicidatos.png" alt="Smart Cities" />
+        </div>
+
+        <div class="grid-item">
+            <h4>
+                ONU-Habitat en el Foro Urbano Mundial 2022, presentó el
+                ‘Compendio de Ciudades Inteligentes Centradas en las Personas’,
+                donde Bicidatos fue reconocida como una solución innovadora que
+                contribuye en la construcción de un mejor futuro urbano a través
+                de la innovación y la tecnología.
+            </h4>
+            <br />
+            <button class="conoce-smart-cities">
+                <a
+                    href="https://unhabitat.org/programme/people-centered-smart-cities/compendium-of-people-centered-practices?fbclid=IwAR2QEfBCfbxJk_AOJJs-fNzrViw8u81m_5W640XwxrbX8FcmWRdX-Onpdg8"
+                    >Conoce Smart Cities</a
+                >
+            </button>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="slogan-grid">
+        <div class="grid-item-2">
+            <h1 id="texto">
+                Usa tu bici, pedalea y comienza a subir BiciDatos
+            </h1>
+        </div>
+        <div class="grid-item-2">
+            <img id="logo" src="/bicidatos.blanco.png" alt="BiciDatos" />
+        </div>
+    </div>
+
+    <br />
+    <br />
+</section>
+
+<style>
+    h1 {
+        color: #15c0ea;
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h4 {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    /* Estilos para el grid */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-rows: auto auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* Estilos para los elementos del grid */
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Estilos para el grid del slogan */
+    .slogan-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-rows: auto auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* Estilos para los elementos del grid */
+    .grid-item-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #logo {
+        width: 70%;
+    }
+
+    .conoce-smart-cities {
+        margin-top: 5vh;
+        background-color: var(--primario);
+        font-size: 1em;
+        border-radius: 50px;
+        border: none;
+        padding: 15px 30px;
+    }
+
+    button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    img {
+        width: 80%;
+    }
+    @media (max-width: 915px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            grid-template-rows: auto;
+        }
+
+        .slogan-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            grid-template-rows: auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            grid-template-rows: auto;
+        }
+
+        .slogan-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            grid-template-rows: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .slogan-grid #logo {
+            width: 100%;
+        }
+    }
+</style>

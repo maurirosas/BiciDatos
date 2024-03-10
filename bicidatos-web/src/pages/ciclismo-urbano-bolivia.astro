@@ -1,0 +1,202 @@
+---
+import HeadBody from "../layouts/HeadBody.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<HeadBody>
+    <Header />
+    <section class="container">
+        <h1>Colectivos de ciclismo urbano en Bolivia</h1>
+        <br />
+        <br />
+        <br />
+
+        <div class="grid-ciclismourbano">
+            <div class="grid-colectivo">
+                <a href="https://www.facebook.com/groups/205467580210035/">
+                    <img
+                        src="/wp-content/uploads/2023/09/47.jpg"
+                        alt="Coordinadora de Ciclistas Cochabamba"
+                    />
+                </a>
+            </div>
+
+            <div class="grid-colectivo">
+                <a href="https://www.facebook.com/MasaCriticaKanata">
+                    <img src="/3.png" alt="Masa Crítica Kanata" />
+                </a>
+            </div>
+
+            <div class="grid-colectivo">
+                <a
+                    href="https://www.facebook.com/profile.php?id=100064614344913&ref=page_internal"
+                >
+                    <img
+                        src="/wp-content/uploads/2023/09/71.jpg"
+                        alt="Mujeres en Bici Bolivia"
+                    />
+                </a>
+            </div>
+
+            <div class="grid-colectivo">
+                <a
+                    href="https://www.facebook.com/MasaCritica.Cochabamba/?locale=es_LA"
+                >
+                    <img
+                        src="/wp-content/uploads/2023/09/62.png"
+                        alt="Masa Crítica Cochabamba"
+                    /></a
+                >
+            </div>
+
+            <div class="grid-colectivo">
+                <a href="https://www.facebook.com/BicicletasClasicasCBBA/">
+                    <img
+                        src="/wp-content/uploads/2023/09/14.png"
+                        alt="Bicicletas Clásicas Cochabamba"
+                    /></a
+                >
+            </div>
+
+            <div class="grid-colectivo">
+                <a
+                    href="https://www.facebook.com/profile.php?id=100039987200510"
+                >
+                    <img
+                        src="/wp-content/uploads/2023/09/15.jpg"
+                        alt="Bicicletas Clásicas Santa Cruz"
+                    /></a
+                >
+            </div>
+
+            <div class="grid-colectivo">
+                <a href="https://www.facebook.com/MasaCritica.SantaCruz">
+                    <img
+                        src="/wp-content/uploads/2023/09/66.png"
+                        alt="Masa Crítica Santa Cruz de la Sierra"
+                    /></a
+                >
+            </div>
+
+            <div class="grid-colectivo">
+                <a href="https://www.facebook.com/MasaCritica.LaPazBo">
+                    <img
+                        src="/wp-content/uploads/2023/09/64.jpg"
+                        alt="Masa Crítica La Paz"
+                    /></a
+                >
+            </div>
+
+            <div class="grid-colectivo">
+                <a
+                    href="https://www.facebook.com/profile.php?id=100066267652630"
+                >
+                    <img
+                        src="/wp-content/uploads/2023/09/65.jpg"
+                        alt="Masa Crítica Oruro"
+                    /></a
+                >
+            </div>
+
+            <div class="grid-colectivo">
+                <a href="https://www.facebook.com/MasaCriticaTarija/">
+                    <img
+                        src="/wp-content/uploads/2023/09/68.jpg"
+                        alt="Masa Crítica Tarija"
+                    /></a
+                >
+            </div>
+
+            <div class="grid-colectivo">
+                <a href="https://www.facebook.com/MasaCritica.Sucre">
+                    <img
+                        src="/wp-content/uploads/2023/09/67.png"
+                        alt="Masa Crítica Sucre"
+                    /></a
+                >
+            </div>
+        </div>
+        <h4>
+            Únete a BiciDatos hoy mismo y sé parte de la transformación hacia
+            una movilidad sostenible y una ciudad con mayor responsabilidad
+            colectiva por el bien común.
+        </h4>
+    </section>
+    <Footer />
+</HeadBody>
+
+<style>
+    .container {
+        padding: 10% 20% 10% 20%;
+    }
+
+    h1 {
+        color: #15c0ea;
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h4 {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 20px;
+        font-weight: 200;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    /* Estilos para el grid */
+    .grid-ciclismourbano {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        grid-template-rows: auto auto auto;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /* Estilos para los elementos del grid */
+    .grid-colectivo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    img {
+        width: 200px;
+        border-radius: 100px;
+    }
+
+    /* Animacion leve continua*/
+    img {
+        animation: moveUpDown 3s ease-in-out infinite;
+    }
+    @keyframes moveUpDown {
+        0% {
+            transform: translateY(-5px);
+        }
+        50% {
+            transform: translateY(5px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .grid-ciclismourbano {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            grid-template-rows: auto auto;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+</style>

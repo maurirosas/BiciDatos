@@ -1,0 +1,204 @@
+.form__container {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  /* height: 100vh; */
+  height: calc(100vh - 64px);
+  background-color: white;
+  top: 0;
+  right: -100%;
+  transition: all 0.2s ease-in-out;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-margin-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .form__container {
+    height: 100vh
+  }
+}
+
+/* .form__container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.form__container::-webkit-scrollbar:vertical {
+  width: 16px;
+}
+
+.form__container::-webkit-scrollbar-button:increment,
+.form__container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.form__container::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.form__container::-webkit-scrollbar-thumb {
+  background-color: #15c0ea;
+  border-radius: 20px;
+  border: 2px solid #15c0ea;
+}
+
+.form__container::-webkit-scrollbar-track {
+  background-color: #9fdae9;
+} */
+
+.subform__container {
+  display: flex;
+}
+
+.form__container--active {
+  right: 0;
+}
+
+.form__description__container {
+  padding: 1rem;
+}
+
+.form__header {
+  padding: 1rem 0.5rem;
+  background-color: #15C0EA;
+  text-align: center;
+  position: relative;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form__header__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.button__container {
+  display: flex;
+}
+
+.form__button {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #15C0EA;
+  border-radius: 0.5rem;
+  appearance: none;
+  border: none;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  font-family: "Poppins";
+}
+
+.formGroup {
+  padding: 0.2rem 2rem;
+}
+
+.formGroupInput {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+input {
+  height: 2rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #15C0EA !important;
+  outline-color: #15C0EA !important;
+
+}
+
+.errors {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  text-align: right;
+  color: #c41c1c;
+}
+
+#selectForm,
+#accesibilidad,
+#senalizacion,
+#seguridadPercibida,
+#tipoServicio,
+#tipoIncidente {
+  width: 250px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5%;
+  font-family: 'Poppins';
+}
+
+@media only screen and (min-width: 768px) {
+  .form__container {
+    top: auto;
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .form__container {
+    top: auto;
+    width: 20%;
+  }
+  
+  .formGroup {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form__container {
+    height: 100vh;
+    background-color: white;
+    overflow-y: scroll;
+  }
+
+  .subform__container {
+    display: flex;
+  }
+
+  .subform__container .formGroup {
+    width: 250px;
+  }
+
+  .formGroup {
+    padding: 0.2rem 3rem;
+  }
+
+  .formGroupInput {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    height: 2rem;
+  }
+
+  .errors {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+    text-align: right;
+    color: #c41c1c;
+  }
+}

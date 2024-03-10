@@ -1,0 +1,78 @@
+---
+import HeadBody from "../layouts/HeadBody.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<HeadBody>
+    <Header />
+    <section class="container">
+        <div>
+            <h1>Términos y condiciones</h1>
+        </div>
+        <br />
+        <p>
+            Términos y condiciones de uso. Al acceder a esta plataforma web y
+            app, desde <a href="https://bicidatos.org/"> bicidatos.org</a> y la
+            <a
+                href="https://play.google.com/store/apps/details?id=org.labtecnosocial.bicidatos.android"
+                >Play Store</a
+            >, usted acepta estar sujeto a estos términos y condiciones de uso,
+            y acepta que es responsable del acuerdo con las leyes locales
+            aplicables.
+        </p>
+
+        <p>
+            Descargo de responsabilidad. Este servicio es proporcionado por Lab
+            Tecnosocial sin costo y está diseñado para usarse tal cual. La
+            gestión de la aplicación corresponde a Lab Tecnosocial y las
+            personas involucradas en su desarrollo.
+        </p>
+
+        <p>
+            Contenido generado por el usuario. Los datos y contenido subidos son
+            responsabilidad de los usuarios respectivos. En caso de controversia
+            legal, la identidad digital de los usuarios puede ser revelada a
+            solicitud formal de la autoridad pertinente.
+        </p>
+
+        <p>
+            Moderación de contenido. No obstante, los encargados de la gestión
+            de la plataforma web y app se esforzaran por moderar los contenidos.
+            Por lo que está prohibido subir información falsa y tendenciosa. En
+            caso de incumplimiento, procederemos a eliminar y bloquear a los
+            usuarios que infringan esta cláusula.
+        </p>
+    </section>
+    <Footer />
+</HeadBody>
+
+<style>
+    .container {
+        padding: 10% 20% 10% 20%;
+    }
+
+    h1 {
+        color: var(--primario);
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    p {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 20px;
+        text-align: left;
+        line-height: 1.5;
+    }
+
+    a {
+        color: var(--primario);
+        font-weight: 400;
+        text-decoration: none;
+    }
+</style>

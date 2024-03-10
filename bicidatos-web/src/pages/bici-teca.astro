@@ -1,0 +1,63 @@
+---
+import HeadBody from "../layouts/HeadBody.astro";
+import Tarjeta from "../components/TarjetaTeca.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const allPosts = await Astro.glob("./bici-teca/*.*");
+
+// order from most recent to least recent by date allPosts
+allPosts.sort((a, b) => {
+    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+});
+---
+
+<HeadBody>
+    <Header />
+    <h1>Bici-teca</h1>
+    <div class="container">
+        <div class="contenedor-tarjetas">
+            {
+                allPosts.map((post) => (
+                    <Tarjeta
+                        url={post.url}
+                        image={post.frontmatter.image}
+                        title={post.frontmatter.title}
+                        year={post.frontmatter.year}
+                        author={post.frontmatter.author}
+                        organization={post.frontmatter.organization}
+                        tags={post.frontmatter.tags}
+                    />
+                ))
+            }
+        </div>
+    </div>
+    <Footer />
+</HeadBody>
+
+<style>
+    h1 {
+        padding-top: 3em;
+        padding-bottom: 1em;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+        margin-bottom: 100px;
+    }
+    .contenedor-tarjetas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+
+    @media (max-width: 480px) {
+        .contenedor-tarjetas {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+    * {
+        font-family: "Albert Sans", sans-serif;";
+    }
+</style>

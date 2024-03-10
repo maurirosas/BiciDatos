@@ -1,0 +1,228 @@
+---
+import HeadBody from "../layouts/HeadBody.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<HeadBody>
+    <Header />
+    <section class="container">
+        <h1>¿Aún no sabes qué es BiciDatos?</h1>
+        <br />
+        <p>
+            BiciDatos es una plataforma web y móvil que desarrolla monitoreo
+            ciudadano de datos sobre ciclismo urbano en Bolivia, para que los
+            ciudadanos se informen y participen activamente en la construcción
+            de la cultura ciclista y de la generación de datos abiertos que
+            permitan la mejora de la toma de decisiones y el desarrollo de
+            políticas públicas en el ámbito de la movilidad urbana basada en la
+            evidencia.
+        </p>
+        <img src="/bicidatos-movil.png" alt="BiciDatos" id="bicidatos" />
+
+        <h1>¿Quieres conocer qué puedes hacer en BiciDatos?</h1>
+        <br />
+        <h2>Mapeo colectivo</h2>
+        <br />
+
+        <img src="/f1.png" alt="BiciDatos" class="logo" />
+        <p>
+            Registrar biciparqueos en tu ciudad, su accesibilidad
+            (pública/privada), si cuenta con señalización y la seguridad
+            percibida.
+        </p>
+
+        <img src="/f2.png" alt="BiciDatos" class="logo" />
+        <p>
+            Registrar servicios como talleres de repuestos, llanterias y tiendas
+            de bicicleta, con sus datos de contacto y características del
+            servicio.
+        </p>
+
+        <img src="/f3.png" alt="BiciDatos" class="logo" />
+        <p>
+            Registrar denuncias de vulneración ciclista, como atropello y
+            agresión a ciclistas, invasión de ciclovías y daños a la
+            infraestructura ciclista.
+        </p>
+
+        <img src="/f4.png" alt="BiciDatos" class="logo" />
+        <p>
+            Registrar aforos ciclistas, para conocer el flujo de ciclistas en un
+            tiempo y lugar determinado de la ciudad.
+        </p>
+
+        <h2>Pedalea</h2>
+        <img src="/f5.png" alt="BiciDatos" class="logo" />
+
+        <p>
+            Registrar tus recorridos en bicicleta, monitoreando tu progreso en
+            el pedal en tiempo, distancia y velocidad.
+        </p>
+
+        <h2>Biciregistro</h2>
+        <img src="/f6.png" alt="BiciDatos" class="logo" />
+        <p>
+            Registrar tus bicicletas dentro del censo de bicicletas de la
+            comunidad ciclista.
+        </p>
+
+        <br />
+        <br />
+        <br />
+
+        <p>
+            Así que, ¿estás listo para pedalear con BiciDatos? Descarga nuestra
+            <a
+                href="https://play.google.com/store/apps/details?id=org.labtecnosocial.bicidatos.android"
+                >aplicación móvil</a
+            > ahora mismo o visita nuestro <a href="/mapa">Mapa en linea</a>.
+            ¡BiciDatos te espera para que juntos generemos un impacto positivo
+            en la cultura ciclista!
+        </p>
+
+        <br />
+        <br />
+
+        <h1>¿Cómo usar BiciDatos'</h1>
+
+        <div class="video-container">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Q0JoMffGK4I?si=DozXwtpExJ3-VsFT"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <br />
+        <br />
+        <h1>¿Conoces sobre la bicilogística en Bolivia?</h1>
+        <br />
+        <div class="video-container">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/s4LhOBfbmhM?si=9HaJRwQYEkinT_o_"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <br />
+        <br />
+        <p>
+            Explora esto y más en el <a href="/bici-blog">Bici-blog</a> y la
+            <a href="/bici-teca">Bici-teca</a>, conoce las experiencias de la
+            comunidad ciclista. Mantente conectado con el apasionante mundo del
+            <a href="/ciclismo-urbano-bolivia">ciclismo urbano</a>. Únete y
+            comparte tu experiencia pedalera. ¡Vive el ciclismo con BiciDatos!
+        </p>
+    </section>
+    <Footer />
+</HeadBody>
+
+<style>
+    .container {
+        padding: 10% 20% 10% 20%;
+    }
+
+    h1 {
+        color: var(--primario);
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #15c0ea;
+        font-family: "Albert Sans", Sans-serif;
+        font-weight: 700;
+        font-size: 100;
+        font-size: 30px;
+        text-align: left;
+        text-align: center;
+    }
+
+    p {
+        color: var(--gris);
+        font-family: "Albert Sans", Sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 20px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    a {
+        color: var(--primario);
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #bicidatos {
+        width: 90%;
+    }
+
+    .logo {
+        width: 70px;
+        margin-left: 350px;
+        margin-left: 350px;
+    }
+
+    /* Animacion leve continua*/
+    .logo {
+        animation: moveUpDown 2s ease-in-out infinite;
+    }
+    @keyframes moveUpDown {
+        0% {
+            transform: translateY(-10px);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-container iframe {
+        width: 69.2%;
+        border-radius: 30px;
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        .logo {
+            margin-left: 55px;
+            margin-left: 20;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .video-container iframe {
+            width: 100%;
+        }
+
+        .accordion-label {
+            font-size: 15px;
+        }
+    }
+</style>

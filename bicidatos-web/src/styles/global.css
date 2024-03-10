@@ -1,0 +1,12 @@
+:root {
+    --primario: #15C0E9;
+    --primario-oscuro: #0098C4;
+    --gris: #7a7a7a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Albert Sans', sans-serif;
+}
